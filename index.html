@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conversor de sistemas numéricos: decimal, binario, octal y hexadecimal." />
+  <title>Base Converter — Conversor numérico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div class="brand"><span class="brand-mark">01</span> Base Converter</div>
+      <h1>Convierte números<br><span>entre distintas bases.</span></h1>
+      <p>Una herramienta simple para trabajar con decimal, binario, octal, hexadecimal y otras bases.</p>
+    </section>
+
+    <section class="converter-card" aria-label="Conversor de sistemas numéricos">
+      <div class="tabs" role="tablist" aria-label="Modo de conversión">
+        <button class="tab active" data-mode="pair" role="tab" aria-selected="true">Conversión entre sistemas</button>
+        <button class="tab" data-mode="base" role="tab" aria-selected="false">Número + base</button>
+      </div>
+
+      <div id="pair-mode" class="mode-panel active-panel">
+        <div class="field-row">
+          <label>
+            <span>Desde</span>
+            <select id="from-base">
+              <option value="10">Decimal</option>
+              <option value="2">Binario</option>
+              <option value="8">Octal</option>
+              <option value="16">Hexadecimal</option>
+            </select>
+          </label>
+          <div class="swap" aria-hidden="true">→</div>
+          <label>
+            <span>Hasta</span>
+            <select id="to-base">
+              <option value="2">Binario</option>
+              <option value="8">Octal</option>
+              <option value="10">Decimal</option>
+              <option value="16">Hexadecimal</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="input-field">
+          <span>Valor</span>
+          <input id="pair-input" type="text" inputmode="text" autocomplete="off" placeholder="Ej. 10110101" />
+        </label>
+
+        <button id="pair-convert" class="primary-btn">Convertir <span>↗</span></button>
+        <div id="pair-result" class="result empty">El resultado aparecerá aquí</div>
+      </div>
+
+      <div id="base-mode" class="mode-panel">
+        <label class="input-field">
+          <span>Número</span>
+          <input id="base-input" type="text" inputmode="text" autocomplete="off" placeholder="Ej. 12345" />
+        </label>
+
+        <label class="input-field">
+          <span>Base de origen</span>
+          <select id="input-base">
+            <option value="2">Base 2 — Binario</option>
+            <option value="6">Base 6</option>
+            <option value="8">Base 8 — Octal</option>
+            <option value="16">Base 16 — Hexadecimal</option>
+          </select>
+        </label>
+
+        <button id="base-convert" class="primary-btn">Convertir a todos <span>↗</span></button>
+        <div id="base-results" class="results-grid"></div>
+      </div>
+    </section>
+
+    <footer>Hecho para estudiar y practicar sistemas de numeración.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
