@@ -1,6 +1,5 @@
 const BASES = {
   2: 'Binario',
-  6: 'Base 6',
   8: 'Octal',
   10: 'Decimal',
   16: 'Hexadecimal'
