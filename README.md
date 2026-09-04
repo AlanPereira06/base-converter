@@ -5,7 +5,7 @@ Web-app sencilla y responsive para convertir números entre sistemas de numeraci
 ## Funciones
 
 - Conversión directa entre decimal, binario, octal y hexadecimal.
-- Modo rápido para introducir un número y su base de origen: **2, 6, 8 o 16**.
+- Modo rápido para introducir un número y su base de origen: **2, 8 o 16**.
 - En el modo de base, muestra el resultado en decimal, binario, octal y hexadecimal.
 - Validación automática de dígitos según la base.
 - Soporte para enteros grandes mediante `BigInt`.
